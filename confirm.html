@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainably You - Complete Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .back {
+            display: block;
+            margin-bottom: 20px;
+            color: #2e8b57;
+            text-decoration: none;
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+            font-family: rakkas;
+        }
+
+        form section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        form h2 {
+            margin-top: 0;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input, form select, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #2e8b57;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: Century Gothic;
+        }
+
+        form button:hover {
+            background-color: #246b42;
+        }
+
+        .cancellation-policy {
+            color: #2e8b57;
+            cursor: pointer;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 33.333%;
+            padding-right: 50px;
+            height: auto;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><img src="3.jpg" height="70" width="300"></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="groups.html">Communities</a></li>
+                    <li class="dropdown">
+                        <a href="book-online.html" class="dropbtn">Book Online</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">Our Services</a>
+                            <a href="products.html">Our Products</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <form id="booking-form" action="done.html" method="POST">
+                <section class="booking-details">
+                    <h2>Complete Your Booking</h2>
+                    <div class="row">
+                        <div class="column">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="column">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="column">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <label for="message">Add a Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </section>
+                <section class="payment">
+                    <h2>Payment Details</h2>
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" required>
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                    <label for="billing-address">Billing Address</label>
+                    <textarea id="billing-address" name="billing-address" required></textarea>
+ <center>  
+                    <button type="submit">Confirm Payment</button><br><br>
+  <a href="index.html" class="back">Cancel</a></center></section>
+           
+                <section>
+                    <h3 class="cancellation-policy">Cancellation Policy</h3>
+                    <p>Cancellations made 12 hours prior to the appointment time are fully refundable.</p>
+                </section>
+            </form>
+        </main>
+        <footer class="footer-section">
+            <div class="footer-logo">
+                <h2>Sustainably You</h2>
+            </div>
+       <div class="footer-content">
+      <p class="footer-info">info@my-site.com</p>
+      <p class="footer-address">123 Green Avenue, Eco Gardens, New Delhi 110001, India</p>
+      <p class="footer-phone">011 - 12345678</p>
+    </div>
+        </footer>
+    </div>
+<script>
+        // Function to validate the form before submission
+        function validateForm() {
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var phone = document.getElementById('phone').value.trim();
+            var cardNumber = document.getElementById('card-number').value.trim();
+            var expiryDate = document.getElementById('expiry-date').value.trim();
+            var cvv = document.getElementById('cvv').value.trim();
+            var billingAddress = document.getElementById('billing-address').value.trim();
+
+            // Basic validation example
+            if (name === '' || email === '' || cardNumber === '' || expiryDate === '' || cvv === '' || billingAddress === '') {
+                alert('Please fill in all required fields.');
+                return false;
+            }
+
+            // Additional validation logic can be added here
+
+            return true;
+        }
+
+        // Attach form submission handler
+        document.getElementById('booking-form').onsubmit = function() {
+            return validateForm();
+        };
+    </script>
+</body>
+</html>

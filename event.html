@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sustainably You Conference 2023</title>
+  <link rel="stylesheet" href="styles.css">
+<style>
+main {
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+.event-section {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+font-family: rakkas;
+}
+
+.event-section h2 {
+  margin-bottom: 10px;
+}
+
+.event-section p {
+  margin-bottom: 10px;
+}
+
+.event-section .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px;
+font-family:Century Gothic;
+}
+
+.event-section .button:hover {
+  background: #45a049;
+}
+
+/* Event Details */
+.event-details {
+  margin-top: 20px;
+}
+
+.event-details h3 {
+  margin-bottom: 10px;
+}
+
+.event-details p {
+  margin-bottom: 10px;
+}
+
+/* Map Image */
+.event-details .map iframe {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  border: 0;
+  margin-top: 10px;
+}
+
+/* Social Share */
+.social-share {
+  margin-top: 20px;
+}
+
+.social-share p {
+  margin-bottom: 10px;
+}
+
+.social-share a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+social-share a img {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  header nav ul li {
+    display: block;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .event-section {
+    padding: 10px;
+  }
+
+  .event-section .button {
+    display: block;
+    margin: 10px 0;
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="3.jpg" height="70" width="300"></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="groups.html">Communities</a></li>
+        <li class="dropdown">
+          <a href="book-online.html" class="dropbtn">Book Online</a>
+          <div class="dropdown-content">
+            <a href="services.html">Our Services</a>
+            <a href="products.html">Our Products</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="event-section">
+      <h1>Sustainably You Conference 2024</h1>
+      <p style="text-align:center">Sun, 28 Jul | Green Summit Convention Center</p>
+       <center><p>Join us for a two-day conference featuring keynote speakers, workshops, and networking opportunities. Dive deep into sustainable living practices.</p>
+     
+         <img src="1.jpg" alt="Sustainably You Conference" height="300" width="450"></center>
+     
+      <div class="event-details">
+ <h3>About the event</h3>
+        <p>The Sustainably You Conference 2024 is a premier event dedicated to fostering sustainable living and eco-friendly practices. Gathering experts, innovators, and enthusiasts, the conference will explore advancements in renewable energy, sustainable agriculture, green technology, and environmental conservation. Attendees will have the opportunity to engage in discussions, attend workshops, and network with leaders in the sustainability field.</p>
+       
+        <h3>Time & Location</h3>
+        <p>28 Jul 2024, 09:00 am – 29 Jul 2024, 05:00 pm<br>Green Summit Convention Center, New Delhi-110001, India</p>
+ <div class="map">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.054184457672!2d77.22189721440728!3d28.631451882418743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce47c160f621d%3A0x6a8bb3e58a336346!2sGreen%20Summit%20Convention%20Center!5e0!3m2!1sen!2sin!4v1625057875141!5m2!1sen!2sin" 
+    width="600" 
+    height="450" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</div>
+
+        <h3>Tickets</h3>
+        <p>Ticket type: General admission<br>Price: ₹ 3,750<br>Tickets available</p>
+ <center><a href="buy.html" class="button">Buy Tickets</a> </center>
+       
+      </div>
+  
+    </section>
+  </main>
+  <footer class="footer-section">
+    <div class="footer-logo">
+      <h2>Sustainably You</h2>
+    </div>
+    <div class="footer-content">
+      <p class="footer-info">info@my-site.com</p>
+      <p class="footer-address">123 Green Avenue, Eco Gardens, New Delhi 110001, India</p>
+      <p class="footer-phone">011 - 12345678</p>
+    </div>
+
+  </footer>
+<script>
+    // Example JavaScript function
+    function greet() {
+      alert('Welcome to Sustainably You Conference 2024!');
+    }
+
+    // Example event listener
+    document.addEventListener('DOMContentLoaded', function() {
+      // You can call functions or set up event listeners here
+      greet(); // Example function call
+    });
+function toggleMapVisibility() {
+      const map = document.querySelector('.map iframe');
+      if (map.style.display === 'none') {
+        map.style.display = 'block';
+      } else {
+        map.style.display = 'none';
+      }
+    }
+
+    // Event listener when DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Example: Add event listener to a button
+      const toggleMapButton = document.getElementById('toggleMap');
+      if (toggleMapButton) {
+        toggleMapButton.addEventListener('click', toggleMapVisibility);
+      }
+  </script>
+</body>
+</html>

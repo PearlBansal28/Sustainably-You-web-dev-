@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Service</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+main {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ font-family: rakkas;
+        }
+ .calendar, .time-slots, {
+    margin-bottom: 20px;
+ font-family: rakkas;
+}
+
+.calendar .month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar .weekdays, .calendar .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar .days div {
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.calendar .days .selected {
+    background-color: #2e8b57;
+    color: white;
+}
+
+.time-slots .slots {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.time-slots .slots button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.time-slots .slots .selected {
+    background-color: #2e8b57;
+    color: white;
+}
+
+
+button.next {
+    background-color: #2e8b57;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: Century Gothic;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><img src="3.jpg" height="70" width="300"></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="groups.html">Communities</a></li>
+                    <li class="dropdown">
+                        <a href="book-online.html" class="dropbtn">Book Online</a>
+                        <div class="dropdown-content">
+                            <a href="services.html">Our Services</a>
+                            <a href="products.html">Our Products</a>
+                        </div>
+                    </li>
+                    </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Booking Slot</h2>
+            <p>Check out availability and book the date and time that works for you</p>
+           
+            <div class="calendar">
+                <div class="month">
+                    <button id="prev-month">&lt;</button>
+                    <span>June 2024</span>
+                    <button id="next-month">&gt;</button>
+                </div>
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="days">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div>
+                </div>
+            </div>
+            <div class="time-slots">
+                <h3>Select a Date and Time</h3>
+                <div class="slots">
+                    <button class="time-slot">09:00 am</button>
+                    <button class="time-slot">10:00 am</button>
+                    <button class="time-slot">11:00 am</button>
+                    <button class="time-slot">12:00 noon</button>
+                    <button class="time-slot">01:00 pm</button>
+                    <button class="time-slot">02:00 pm</button>
+                    <button class="time-slot">03:00 pm</button>
+                    <button class="time-slot">04:00 pm</button>
+                    <button class="time-slot">05:00 pm</button>
+                    <button class="time-slot">06:00 pm</button>
+                </div>
+            </div>
+           <br>
+           <center><a href="confirm.html" style="text-decoration: none; color:white;"> <button class="next" id="next-button" disabled>Next</button></a><center>
+        </main>
+<footer class="footer-section">
+            <div class="footer-logo">
+                <h2>Sustainably You</h2>
+            </div>
+          <div class="footer-content">
+      <p class="footer-info">info@my-site.com</p>
+      <p class="footer-address">123 Green Avenue, Eco Gardens, New Delhi 110001, India</p>
+      <p class="footer-phone">011 - 12345678</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
